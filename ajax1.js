@@ -3,7 +3,7 @@ function cl(){
     city=city.toUpperCase();
     console.log(city)
 
-var url=`https://api.openweathermap.org/data/2.5/weather?q=kolkata&appid=b836fa1e5754f866418ba57891c8577e`;
+var url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b836fa1e5754f866418ba57891c8577e`;
 
 
 var response=$.ajax(url,{
