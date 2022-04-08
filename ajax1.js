@@ -18,9 +18,9 @@ var response=$.ajax(url,{
         
         document.getElementById("city").innerHTML=city;
         document.getElementById("weather").innerHTML=data.weather[0].main;
-        document.getElementById("temp").innerHTML=data.main.temp+" <sup>o</sup> K";
-        document.getElementById("min-temp").innerHTML=data.main.temp_min+" <sup>o</sup> K";
-        document.getElementById("max-temp").innerHTML=data.main.temp_max+" <sup>o</sup> K";
+        document.getElementById("temp").innerHTML=parseInt(data.main.temp-273)+" <sup>o</sup> C";
+        document.getElementById("min-temp").innerHTML=parseInt(data.main.temp_min-273)+" <sup>o</sup> C";
+        document.getElementById("max-temp").innerHTML=parseInt(data.main.temp_max-273)+" <sup>o</sup> C";
         document.getElementById("wind").innerHTML=data.wind.speed+" Km/h";
        
         console.log(Xhr);
